@@ -11,5 +11,7 @@
   "scripts": {
     "client": "yarn workspace client start",
     "server": "yarn workspace server start"
-  }
+  },
+  "repository": "https://github.com/jkim8/api-practice.git",
+  "author": "jkim8 <juno0218@naver.com>"
 }
