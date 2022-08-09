@@ -10,6 +10,7 @@ const MsgItem = ({
   isEditing,
   startEdit,
   myId,
+  user,
 }) => (
   <li className="messages__item">
     <h3>
@@ -33,6 +34,7 @@ const MsgItem = ({
     ) : (
       text
     )}
+
     {myId === userId && (
       <div className="messages__buttons">
         <button onClick={startEdit}>수정</button>
