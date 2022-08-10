@@ -1,5 +1,4 @@
 import MsgInput from "./MsgInput";
-
 const MsgItem = ({
   id,
   userId,
@@ -14,7 +13,7 @@ const MsgItem = ({
 }) => (
   <li className="messages__item">
     <h3>
-      {user.nickname}{" "}
+      {userId}{" "}
       <sub>
         {new Date(timestamp).toLocaleString("ko-KR", {
           year: "numeric",

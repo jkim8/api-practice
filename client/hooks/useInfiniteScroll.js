@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 
 const useInfiniteScroll = (targetEl) => {
   const observerRef = useRef(null);
@@ -20,6 +20,7 @@ const useInfiniteScroll = (targetEl) => {
       getObserver().disconnect();
     };
   }, [targetEl.current]);
+
   return intersecting;
 };
 
