@@ -1,10 +1,12 @@
-import { readDB, writeDB } from "../dbController.js";
 import { v4 } from "uuid";
+import { readDB, writeDB } from "../dbController.js";
+
 const getMsgs = () => readDB("messages");
 const setMsgs = (data) => writeDB("messages", data);
+
 const messagesRoute = [
   {
-    //GET MESSAGES
+    // GET MESSAGES
     method: "get",
     route: "/messages",
     handler: ({ query: { cursor = "" } }, res) => {
@@ -29,12 +31,12 @@ const messagesRoute = [
     },
   },
   {
-    //CREATE MESSAGES
+    // CREATE MESSAGE
     method: "post",
     route: "/messages",
     handler: ({ body }, res) => {
       try {
-        if (!body.userId) throw Error("No userId");
+        if (!body.userId) throw Error("no userId");
         const msgs = getMsgs();
         const newMsg = {
           id: v4(),
